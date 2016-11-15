@@ -1,0 +1,38 @@
+
+void driveForward(time)
+    set right wheel to speed 1
+    set left wheel to speed 1
+    delay for time //given in the parameter
+    stop()
+
+void rightTurn90()
+    set right wheel to speed 0
+    set left wheel to speed 1
+    delay for 1.1 seconds//this will cause the robot to turn 90 degrees
+    //robot diamter is 3.5 feet meaning that if only left wheel is spinning, it must go 22 feet to make a full 360 turn
+    //22 ft for 360 degrees means 5.5 ft for a 90 degree turn (takes 1.1 seconds to go 5.5ft)
+    stop()
+
+void leftTurn()
+    set right wheel to speed 1
+    set left wheel to speed 0
+    delay for 1.1 seconds
+    stop()
+
+void stop()
+    set right wheel to speed 0
+    set left wheel to speed 0
+
+int main()
+    driveForward(1) //robot will drive one second forward (5 ft) and then stop
+
+    rightTurn()
+
+    driveForward(5)
+    //robot will drive forward 5 seconds (25 ft) and stop
+    //no need to wait for other robot because by the 5 seconds it takes to intercept
+    //the opposing robot will be long out of the way (5 feet away from the interception already)
+
+    leftTurn()
+
+    driveForward(1.4) //robot will drive forward 7 feet (1.4 seconds) and then stop
