@@ -8,12 +8,13 @@ void driveForward(time)
 void rightTurn90()
     set right wheel to speed 0
     set left wheel to speed 1
-    delay for 1.1 seconds//this will cause the robot to turn 90 degrees
+    delay for 1.1 seconds
+    //this will cause the robot to turn 90 degrees
     //robot diamter is 3.5 feet meaning that if only left wheel is spinning, it must go 22 feet to make a full 360 turn
     //22 ft for 360 degrees means 5.5 ft for a 90 degree turn (takes 1.1 seconds to go 5.5ft)
     stop()
 
-void leftTurn()
+void leftTurn90()
     set right wheel to speed 1
     set left wheel to speed 0
     delay for 1.1 seconds
